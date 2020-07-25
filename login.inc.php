@@ -24,6 +24,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					$response['error'] = false;
 					$response['message'] = "Logged in";
 					$response['userId'] = $row['id'];
+					$response['userName'] = $row['username'];
 				}
 				else{
 					$response['error'] = true;
