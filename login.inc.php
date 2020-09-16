@@ -25,6 +25,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 					$response['message'] = "Logged in";
 					$response['userId'] = $row['id'];
 					$response['userName'] = $row['username'];
+
+					$_SESSION['userId'] = $row['id'];
+					$_SESSION['userName'] = $row['username'];
 				}
 				else{
 					$response['error'] = true;
